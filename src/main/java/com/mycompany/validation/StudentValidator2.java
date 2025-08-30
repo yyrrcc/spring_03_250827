@@ -25,10 +25,13 @@ public class StudentValidator2 implements Validator {
 			errors.rejectValue("id", "id가 공란입니다."); // 1. 에러가 발생한 필드 변수 2. 에러코드
 		}
 
-		//		if (pw == null || pw.strip().isEmpty()) {
+//		1. validate 메서드를 이용한 유효성 검증		
+//		if (pw == null || pw.strip().isEmpty()) {
 //			System.out.println("에러가 발생된 비밀번호 : " + pw);
 //			errors.rejectValue("pw", "pw가 공란입니다."); // 1. 에러가 발생한 필드 변수 2. 에러코드
 //		}
+		
+		// 2. ValidationUtils 클래스 이용한 유효성 검증
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "pw", "ValidationUtils로 pw 유효성 체크");
 		
 

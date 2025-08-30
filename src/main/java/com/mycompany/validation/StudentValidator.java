@@ -5,7 +5,6 @@ import org.springframework.validation.Validator;
 
 public class StudentValidator implements Validator {
 
-	
 	@Override
 	// 검증 할 객체(StudentDto)의 클래스 타입 정보 가져오기
 	public boolean supports(Class<?> clazz) {
